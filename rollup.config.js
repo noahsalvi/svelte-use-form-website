@@ -10,6 +10,7 @@ import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
+import windicss from "svelte-windicss-preprocess";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -37,7 +38,7 @@ export default {
       svelte({
         preprocess: [
           sveltePreprocess({ sourceMap: dev }),
-          require("svelte-windicss-preprocess").preprocess({
+          windicss.preprocess({
             config: "tailwind.config.js", // tailwind config file path
             compile: true, // false: interpretation mode; true: compilation mode
             prefix: "windi-", // set compilation mode style prefix
@@ -109,7 +110,7 @@ export default {
       svelte({
         preprocess: [
           sveltePreprocess({ sourceMap: dev }),
-          require("svelte-windicss-preprocess").preprocess({
+          windicss.preprocess({
             config: "tailwind.config.js", // tailwind config file path
             compile: true, // false: interpretation mode; true: compilation mode
             prefix: "windi-", // set compilation mode style prefix
