@@ -38,13 +38,13 @@ export default {
       svelte({
         preprocess: [
           sveltePreprocess({ sourceMap: dev }),
-          windicss.preprocess({
-            config: "tailwind.config.js", // tailwind config file path
-            compile: true, // false: interpretation mode; true: compilation mode
-            prefix: "windi-", // set compilation mode style prefix
-            globalPreflight: true, // set preflight style is global or scoped
-            globalUtility: true, // set utility style is global or scoped
-          }),
+          //   windicss.preprocess({
+          //     config: "tailwind.config.js", // tailwind config file path
+          //     compile: true, // false: interpretation mode; true: compilation mode
+          //     prefix: "windi-", // set compilation mode style prefix
+          //     globalPreflight: true, // set preflight style is global or scoped
+          //     globalUtility: true, // set utility style is global or scoped
+          //   }),
         ],
         compilerOptions: {
           dev,
@@ -110,13 +110,13 @@ export default {
       svelte({
         preprocess: [
           sveltePreprocess({ sourceMap: dev }),
-          //   windicss.preprocess({
-          //     config: "tailwind.config.js", // tailwind config file path
-          //     compile: true, // false: interpretation mode; true: compilation mode
-          //     prefix: "windi-", // set compilation mode style prefix
-          //     globalPreflight: true, // set preflight style is global or scoped
-          //     globalUtility: true, // set utility style is global or scoped
-          //   }),
+          windicss.preprocess({
+            config: "tailwind.config.js", // tailwind config file path
+            compile: true, // false: interpretation mode; true: compilation mode
+            prefix: "windi-", // set compilation mode style prefix
+            globalPreflight: true, // set preflight style is global or scoped
+            globalUtility: true, // set utility style is global or scoped
+          }),
         ],
         compilerOptions: {
           dev,

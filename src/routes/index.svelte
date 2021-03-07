@@ -6,7 +6,7 @@
   <title>Sapper project template</title>
 </svelte:head>
 
-<h1 class="">Great success!</h1>
+<h1 class="text-pink-400 hover:(text-purple-400 text-2xl)">Great success!</h1>
 
 <figure>
   <img alt="Success Kid" src={successkid} />
