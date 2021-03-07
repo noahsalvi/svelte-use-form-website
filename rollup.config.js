@@ -36,16 +36,7 @@ export default {
         },
       }),
       svelte({
-        preprocess: [
-          windicss.preprocess({
-            config: "tailwind.config.js", // tailwind config file path
-            compile: false, // false: interpretation mode; true: compilation mode
-            prefix: "windi-", // set compilation mode style prefix
-            globalPreflight: true, // set preflight style is global or scoped
-            globalUtility: false, // set utility style is global or scoped
-          }),
-          sveltePreprocess({ sourceMap: dev }),
-        ],
+        preprocess: [sveltePreprocess({ sourceMap: dev })],
         compilerOptions: {
           dev,
           hydratable: true,
@@ -108,16 +99,7 @@ export default {
         },
       }),
       svelte({
-        preprocess: [
-          windicss.preprocess({
-            config: "tailwind.config.js", // tailwind config file path
-            compile: false, // false: interpretation mode; true: compilation mode
-            prefix: "windi-", // set compilation mode style prefix
-            globalPreflight: true, // set preflight style is global or scoped
-            globalUtility: false, // set utility style is global or scoped
-          }),
-          sveltePreprocess({ sourceMap: dev }),
-        ],
+        preprocess: [sveltePreprocess({ sourceMap: dev })],
         compilerOptions: {
           dev,
           generate: "ssr",
